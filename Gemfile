@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 
 ruby '>=3.2.4'
 
-# Ensure github repositories are fetched using HTTPS
-git_source(:github) do |repo_name|
+agit_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
@@ -124,6 +123,7 @@ gem 'multi_xml'
 gem 'nokogiri', '>= 1.18.4'
 gem 'omniauth'
 gem 'rails', '~> 7.0.1'
+gem 'puma', '~> 6.0'
 gem 'rails-html-sanitizer', '~> 1.6', '>= 1.6.2'
 gem 'rufus-scheduler', '~> 3.9', '>= 3.9.2', require: false
 gem 'sassc-rails'
@@ -166,7 +166,6 @@ group :development do
   group :test do
     gem 'capybara'
     gem 'capybara-select-2', github: 'Hirurg103/capybara_select2', require: false
-    gem 'puma'
     gem 'rails-controller-testing'
     gem 'rr', require: false
     gem 'rspec'
